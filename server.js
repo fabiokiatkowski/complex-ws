@@ -11,6 +11,7 @@ app.route('/api/show')
     res.send("<status>OK</status>")
 });
 
-app.listen(5000, function () {
-    console.log('Listening at 5000');
+var server = app.listen(8080, function () {
+    var port = server.address().port;
+    console.log('Listening at ', port);
 })
